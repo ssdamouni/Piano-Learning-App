@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Navbar from './Navbar';
+import Header from './Header';
 import News from './News';
 import Contact from './Contact';
 import About from './About';
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
       <Navbar />
+      <Header />
         <Route exact={true} path="/" component={App} />
         <Route path="/News" component={News} />
         <Route path="/Contact" component={Contact} />

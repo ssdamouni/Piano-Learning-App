@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Navbar from './Navbar';
+import News from './News';
+import Contact from './Contact';
+import About from './About';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
@@ -14,9 +17,9 @@ ReactDOM.render(
       <Router>
       <Navbar />
         <Route exact={true} path="/" component={App} />
-        <Route exact={true} path="/News" component={News} />
-        <Route exact={true} path="/Contact" component={Contact} />
-        <Route exact={true} path="/About" component={About} />
+        <Route path="/News" component={News} />
+        <Route path="/Contact" component={Contact} />
+        <Route path="/About" component={About} />
       </Router>  
     </Provider>
   </React.StrictMode>,

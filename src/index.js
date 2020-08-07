@@ -2,14 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Navbar from './Navbar';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+      <Navbar />
+        <Route exact={true} path="/" component={App} />
+        <Route exact={true} path="/News" component={News} />
+        <Route exact={true} path="/Contact" component={Contact} />
+        <Route exact={true} path="/About" component={About} />
+      </Router>  
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
